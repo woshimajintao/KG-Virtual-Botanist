@@ -18,9 +18,9 @@ st.markdown("Use the cascading sidebar filters to explore specific sub-graphs. S
 @st.cache_data
 def load_data():
     #nodes_df = pd.read_csv("KG_nodes_all.csv")
-    nodes_df = pd.read_csv("KG_nodes_clean_nodes.csv")
+    nodes_df = pd.read_csv("KG_nodes_normalized.csv")
     #edges_df = pd.read_csv("KG_edges_all.csv")
-    edges_df = pd.read_csv("KG_edges_clean_edges.csv")
+    edges_df = pd.read_csv("KG_edges_normalized.csv")
     
     # Pre-calculate global degree for accurate node sizing
     temp_G = nx.from_pandas_edgelist(edges_df, 'source', 'target', create_using=nx.DiGraph())
