@@ -33,7 +33,8 @@ Use the cascading filters in the sidebar to focus on a smaller and more interpre
 # 2. File Paths
 # ==========================================
 NODES_FILE = "KG_nodes_with_organs.csv"
-EDGES_FILE = "KG_edges_with_organs.csv"
+#EDGES_FILE = "KG_edges_with_organs.csv"
+EDGES_FILE = "KG_edges_with_organs.csv.gz"
 
 
 # ==========================================
