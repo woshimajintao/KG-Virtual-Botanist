@@ -66,6 +66,11 @@ def load_data(nodes_path, edges_path):
     if "value_type" not in nodes_df.columns:
         nodes_df["value_type"] = ""
 
+    if edges_path.endswith('.gz'):
+        edges_df = pd.read_csv(edges_path, compression='gzip')
+    else:
+        edges_df = pd.read_csv(edges_path)
+
     # Global degree for node sizing
     temp_G = nx.from_pandas_edgelist(
         edges_df, source="source", target="target", create_using=nx.DiGraph()
